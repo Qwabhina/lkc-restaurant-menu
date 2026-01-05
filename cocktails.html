@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktails & Mocktails - Adinkra Restaurant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="brand-container">
+                    <div class="brand-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="brand-text">
+                        <div class="brand-name">LANCASTER</div>
+                        <div class="brand-location">KUMASI CITY</div>
+                    </div>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="a-la-carte.html">À La Carte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="beverages.html">Beverages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cocktails.html">Cocktails & Mocktails</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Header -->
+    <section class="menu-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Cocktails & Mocktails</h1>
+                    <p>Expertly crafted cocktails and refreshing mocktails for every taste</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Content -->
+    <section class="menu-content">
+        <div class="container">
+            <!-- Search Bar -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input type="text" class="form-control" id="menuSearch" placeholder="Search cocktails & mocktails...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alcoholic Cocktails Category -->
+            <div class="menu-category" data-aos="fade-up">
+                <div class="category-header">
+                    <h3><i class="fas fa-cocktail me-2"></i>Alcoholic Cocktails</h3>
+                    <i class="fas fa-chevron-down category-toggle"></i>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item has-image">
+                        <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=400&h=300&fit=crop&crop=center" 
+                             alt="Sex on the Beach" 
+                             class="menu-item-image glightbox" 
+                             data-gallery="cocktails"
+                             data-title="Sex on the Beach"
+                             data-description="Peach liqueur, Absolut Vodka, Cranberry juice, Orange juice, Grenadine syrup - GH₵ 170.00">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Sex on the Beach</h4>
+                                <span class="item-price">GH₵ 170.00</span>
+                            </div>
+                            <p class="item-description">Peach liqueur, Absolut Vodka, Cranberry juice, Orange juice, Grenadine syrup</p>
+                        </div>
+                    </div>
+                    <div class="menu-item has-image">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop&crop=center" 
+                             alt="Snake in the Grass" 
+                             class="menu-item-image glightbox" 
+                             data-gallery="cocktails"
+                             data-title="Snake in the Grass"
+                             data-description="Vodka, Crème de menthe, Fresh lime juice, Lemonade - GH₵ 160.00">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Snake in the Grass</h4>
+                                <span class="item-price">GH₵ 160.00</span>
+                            </div>
+                            <p class="item-description">Vodka, Crème de menthe, Fresh lime juice, Lemonade</p>
+                        </div>
+                    </div>
+                    <div class="menu-item has-image">
+                        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop&crop=center" 
+                             alt="Lancaster Blue Pool" 
+                             class="menu-item-image glightbox" 
+                             data-gallery="cocktails"
+                             data-title="Lancaster Blue Pool"
+                             data-description="Malibu, Blue curacao, Fresh pineapple juice - GH₵ 160.00">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Lancaster Blue Pool</h4>
+                                <span class="item-price">GH₵ 160.00</span>
+                            </div>
+                            <p class="item-description">Malibu, Blue curacao, Fresh pineapple juice</p>
+                        </div>
+                    </div>
+                    <div class="menu-item has-image">
+                        <img src="https://images.unsplash.com/photo-1546171753-97d7676e4602?w=400&h=300&fit=crop&crop=center" 
+                             alt="Margarita" 
+                             class="menu-item-image glightbox" 
+                             data-gallery="cocktails"
+                             data-title="Margarita"
+                             data-description="Tequila, Fresh lime juice, Triple sec - GH₵ 160.00">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Margarita</h4>
+                                <span class="item-price">GH₵ 160.00</span>
+                            </div>
+                            <p class="item-description">Tequila, Fresh lime juice, Triple sec</p>
+                        </div>
+                    </div>
+                    <div class="menu-item has-image">
+                        <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?w=400&h=300&fit=crop&crop=center" 
+                             alt="Pink Lady" 
+                             class="menu-item-image glightbox" 
+                             data-gallery="cocktails"
+                             data-title="Pink Lady"
+                             data-description="Gin, vodka, cranberry juice, orange juice, grenadine syrup - GH₵ 160.00">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Pink Lady</h4>
+                                <span class="item-price">GH₵ 160.00</span>
+                            </div>
+                            <p class="item-description">Gin, vodka, cranberry juice, orange juice, grenadine syrup</p>
+                        </div>
+                    </div>
+                    <div class="menu-item has-image">
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=300&fit=crop&crop=center" 
+                             alt="Mojito" 
+                             class="menu-item-image glightbox" 
+                             data-gallery="cocktails"
+                             data-title="Mojito"
+                             data-description="Fresh mint, white rum, sugar, zest of lime and cooling soda water - GH₵ 130.00">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Mojito</h4>
+                                <span class="item-price">GH₵ 130.00</span>
+                            </div>
+                            <p class="item-description">Fresh mint, white rum, sugar, zest of lime and cooling soda water</p>
+                        </div>
+                    </div>
+                    <div class="menu-item has-image">
+                        <img src="https://images.unsplash.com/photo-1546171753-97d7676e4602?w=400&h=300&fit=crop&crop=center" 
+                             alt="Pinacolada" 
+                             class="menu-item-image glightbox" 
+                             data-gallery="cocktails"
+                             data-title="Pinacolada"
+                             data-description="Coconut milk, Malibu rum, Fresh pineapple juice - GH₵ 160.00">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Pinacolada</h4>
+                                <span class="item-price">GH₵ 160.00</span>
+                            </div>
+                            <p class="item-description">Coconut milk, Malibu rum, Fresh pineapple juice</p>
+                        </div>
+                    </div>
+                    <div class="menu-item has-image">
+                        <img src="images/placeholder-drink.svg" 
+                             alt="Absolut Coffee Legacy" 
+                             class="menu-item-image placeholder glightbox" 
+                             data-gallery="cocktails"
+                             data-title="Absolut Coffee Legacy"
+                             data-description="Vanilla ice cream, coffee liqueur, fresh milk, vodka, baileys - GH₵ 160.00">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Absolut Coffee Legacy</h4>
+                                <span class="item-price">GH₵ 160.00</span>
+                            </div>
+                            <p class="item-description">Vanilla ice cream, coffee liqueur, fresh milk, vodka, baileys</p>
+                        </div>
+                    </div>
+                    <div class="menu-item has-image">
+                        <img src="images/placeholder-drink.svg" 
+                             alt="Long Island" 
+                             class="menu-item-image placeholder glightbox" 
+                             data-gallery="cocktails"
+                             data-title="Long Island"
+                             data-description="Absolut vodka, Gin, Triple sec, Rum, tequila, Top with coke - GH₵ 220.00">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Long Island</h4>
+                                <span class="item-price">GH₵ 220.00</span>
+                            </div>
+                            <p class="item-description">Absolut vodka, Gin, Triple sec, Rum, tequila, Top with coke</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Local Cocktails Category -->
+            <div class="menu-category" data-aos="fade-up" data-aos-delay="100">
+                <div class="category-header">
+                    <h3><i class="fas fa-glass-cheers me-2"></i>Local Cocktails</h3>
+                    <i class="fas fa-chevron-down category-toggle"></i>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4 class="item-name">Twist</h4>
+                            <span class="item-price">GH₵ 110.00</span>
+                        </div>
+                        <p class="item-description">Kasapreko gin, orange juice, sugar syrup, grenadine syrup</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4 class="item-name">Fresh Sunrise</h4>
+                            <span class="item-price">GH₵ 110.00</span>
+                        </div>
+                        <p class="item-description">Kasapreko gin, orange juice, pineapple juice, grenadine syrup</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mocktails Category -->
+            <div class="menu-category" data-aos="fade-up" data-aos-delay="200">
+                <div class="category-header">
+                    <h3><i class="fas fa-glass-water me-2"></i>Mocktails</h3>
+                    <i class="fas fa-chevron-down category-toggle"></i>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item has-image">
+                        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop&crop=center" 
+                             alt="Chapman" 
+                             class="menu-item-image glightbox" 
+                             data-gallery="mocktails"
+                             data-title="Chapman"
+                             data-description="Bitters, Fanta, Sprite, Cucumber, Grenadine - GH₵ 120.00">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Chapman</h4>
+                                <span class="item-price">GH₵ 120.00</span>
+                            </div>
+                            <p class="item-description">Bitters, Fanta, Sprite, Cucumber, Grenadine</p>
+                        </div>
+                    </div>
+                    <div class="menu-item has-image">
+                        <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?w=400&h=300&fit=crop&crop=center" 
+                             alt="Sunset" 
+                             class="menu-item-image glightbox" 
+                             data-gallery="mocktails"
+                             data-title="Sunset"
+                             data-description="Orange juice, red grape juice, grenadine syrup - GH₵ 120.00">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Sunset</h4>
+                                <span class="item-price">GH₵ 120.00</span>
+                            </div>
+                            <p class="item-description">Orange juice, red grape juice, grenadine syrup</p>
+                        </div>
+                    </div>
+                    <div class="menu-item has-image">
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=300&fit=crop&crop=center" 
+                             alt="Virgin Mojito" 
+                             class="menu-item-image glightbox" 
+                             data-gallery="mocktails"
+                             data-title="Virgin Mojito"
+                             data-description="Fresh mint, sugar, zest of lime and soda water - GH₵ 120.00">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Virgin Mojito</h4>
+                                <span class="item-price">GH₵ 120.00</span>
+                            </div>
+                            <p class="item-description">Fresh mint, sugar, zest of lime and soda water</p>
+                        </div>
+                    </div>
+                    <div class="menu-item has-image">
+                        <img src="https://images.unsplash.com/photo-1546171753-97d7676e4602?w=400&h=300&fit=crop&crop=center" 
+                             alt="Virgin Colada" 
+                             class="menu-item-image glightbox" 
+                             data-gallery="mocktails"
+                             data-title="Virgin Colada"
+                             data-description="Coconut syrup, Pineapple juice, fresh milk, ice cream - GH₵ 130.00">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Virgin Colada</h4>
+                                <span class="item-price">GH₵ 130.00</span>
+                            </div>
+                            <p class="item-description">Coconut syrup, Pineapple juice, fresh milk, ice cream</p>
+                        </div>
+                    </div>
+                    <div class="menu-item has-image">
+                        <img src="images/placeholder-drink.svg" 
+                             alt="Vanilla Milk Shake" 
+                             class="menu-item-image placeholder glightbox" 
+                             data-gallery="mocktails"
+                             data-title="Vanilla Milk Shake"
+                             data-description="Vanilla ice cream, Whole milk, ice cubes - GH₵ 140.00">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Vanilla Milk Shake</h4>
+                                <span class="item-price">GH₵ 140.00</span>
+                            </div>
+                            <p class="item-description">Vanilla ice cream, Whole milk, ice cubes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Local Mocktail Category -->
+            <div class="menu-category" data-aos="fade-up" data-aos-delay="300">
+                <div class="category-header">
+                    <h3><i class="fas fa-leaf me-2"></i>Local Mocktail</h3>
+                    <i class="fas fa-chevron-down category-toggle"></i>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h4 class="item-name">Kasa Virgin Mojito</h4>
+                            <span class="item-price">GH₵ 110.00</span>
+                        </div>
+                        <p class="item-description">Kasapreko lime cordial, sugar syrup, soda water, fresh mint</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cocktail Info -->
+            <div class="alert alert-info mt-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <h5><i class="fas fa-info-circle me-2"></i>Cocktail Information</h5>
+                        <p class="mb-0 small">All cocktails are expertly crafted by our skilled bartenders using premium ingredients. Mocktails offer the same great taste without alcohol, perfect for all ages.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Offers -->
+            <div class="row mt-3 g-3">
+                <div class="col-12" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card border-primary">
+                        <div class="card-header bg-primary text-white">
+                            <h6 class="mb-0"><i class="fas fa-clock me-2"></i>Happy Hour</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text small">Enjoy 20% off all cocktails from 5:00 PM to 7:00 PM daily!</p>
+                            <small class="text-muted">*Excludes premium cocktails and special occasions</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card border-success">
+                        <div class="card-header bg-success text-white">
+                            <h6 class="mb-0"><i class="fas fa-users me-2"></i>Group Special</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text small">Order 5 or more cocktails and get the 6th one free!</p>
+                            <small class="text-muted">*Must be ordered at the same time</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Search Button (Mobile) -->
+    <button class="floating-search-btn d-md-none" id="floatingSearchBtn" aria-label="Search Menu">
+        <i class="fas fa-search"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-text">Our prices are inclusive of 1% Tourism Levy, 2.5% NHIL, 2.5% GETF and 12.5% VAT</p>
+                    <p class="footer-copyright">&copy; 2024 Lancaster Restaurant. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

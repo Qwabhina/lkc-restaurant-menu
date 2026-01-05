@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adinkra Restaurant - Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="brand-container">
+                    <div class="brand-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="brand-text">
+                        <div class="brand-name">LANCASTER</div>
+                        <div class="brand-location">KUMASI CITY</div>
+                    </div>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="a-la-carte.html">À La Carte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="beverages.html">Beverages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cocktails.html">Cocktails & Mocktails</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title">RESTAURANT, LOUNGE & POOL BAR</h1>
+                    <p class="hero-subtitle">AVAILABLE FROM 11:00AM TO 10:30PM</p>
+                    <div class="hero-buttons">
+                        <a href="a-la-carte.html" class="btn btn-primary btn-lg me-3">
+                            <i class="fas fa-utensils me-2"></i>View Menu
+                        </a>
+                        <a href="#categories" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-arrow-down me-2"></i>Explore
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories-section py-4">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col-12">
+                    <h2 class="section-title">Our Menu Categories</h2>
+                    <p class="section-subtitle">Discover our carefully crafted selection</p>
+                </div>
+            </div>
+            
+            <div class="row g-3">
+                <div class="col-12 col-md-6">
+                    <div class="category-card" data-aos="fade-up">
+                        <div class="category-image">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>À La Carte</h3>
+                            <p>Snacks, Salads, Hot Soup, Pasta, Local Dishes, Pizzas & More</p>
+                            <a href="a-la-carte.html" class="btn btn-primary">
+                                View Menu <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6">
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="category-image">
+                            <i class="fas fa-wine-glass"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Beverages</h3>
+                            <p>House Wines, Spirits, Beers, Soft Drinks & More</p>
+                            <a href="beverages.html" class="btn btn-primary">
+                                View Menu <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12">
+                    <div class="category-card category-card-wide" data-aos="fade-up" data-aos-delay="200">
+                        <div class="category-image">
+                            <i class="fas fa-cocktail"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Cocktails & Mocktails</h3>
+                            <p>Alcoholic Cocktails, Local Cocktails, Mocktails & Specialty Drinks</p>
+                            <a href="cocktails.html" class="btn btn-primary">
+                                View Menu <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-text">Our prices are inclusive of 1% Tourism Levy, 2.5% NHIL, 2.5% GETF and 12.5% VAT</p>
+                    <p class="footer-copyright">&copy; 2024 Lancaster Restaurant. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
