@@ -1,0 +1,176 @@
+{
+  "aLaCarte": [
+    {
+      "id": "snacks",
+      "name": "Snacks",
+      "icon": "fas fa-cookie-bite",
+      "gallery": "snacks",
+      "open": false,
+      "items": [
+        {
+          "id": "snack-1",
+          "name": "Kejetia Hot Fried Kelewele",
+          "price": 140.00,
+          "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop&crop=center",
+          "description": "Spicy fried plantain cubes seasoned with ginger and spices"
+        },
+        {
+          "id": "snack-2",
+          "name": "French Fries",
+          "price": 120.00,
+          "image": "https://images.unsplash.com/photo-1630384060421-cb40f6d6b6b6?w=400&h=300&fit=crop&crop=center",
+          "description": "Crispy golden fries served with ketchup"
+        },
+        {
+          "id": "snack-3",
+          "name": "Plantain Chips",
+          "price": 110.00,
+          "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400&h=300&fit=crop&crop=center",
+          "description": "Thinly sliced fried plantain chips"
+        }
+      ]
+    },
+    {
+      "id": "salads",
+      "name": "Salads",
+      "icon": "fas fa-leaf",
+      "gallery": "salads",
+      "open": false,
+      "items": [
+        {
+          "id": "salad-1",
+          "name": "Garden Salad",
+          "price": 160.00,
+          "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop&crop=center",
+          "description": "Fresh mixed greens with tomatoes, cucumbers, and vinaigrette"
+        },
+        {
+          "id": "salad-2",
+          "name": "Caesar Salad",
+          "price": 180.00,
+          "image": "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400&h=300&fit=crop&crop=center",
+          "description": "Romaine lettuce with Caesar dressing, croutons, and parmesan"
+        }
+      ]
+    },
+    {
+      "id": "hot-soup",
+      "name": "Hot Soup",
+      "icon": "fas fa-bowl-rice",
+      "gallery": "soups",
+      "open": false,
+      "items": [
+        {
+          "id": "soup-1",
+          "name": "Light Soup with Meat",
+          "price": 200.00,
+          "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=300&fit=crop&crop=center",
+          "description": "Traditional Ghanaian light soup with goat meat"
+        },
+        {
+          "id": "soup-2",
+          "name": "Groundnut Soup",
+          "price": 220.00,
+          "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop&crop=center",
+          "description": "Rich peanut soup with chicken and vegetables"
+        }
+      ]
+    }
+  ],
+  "beverages": [
+    {
+      "id": "house-wines",
+      "name": "House Wines",
+      "icon": "fas fa-wine-glass",
+      "gallery": "wines",
+      "open": false,
+      "items": [
+        {
+          "id": "wine-1",
+          "name": "House Red Wine",
+          "price": [100.00, 420.00],
+          "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=400&h=300&fit=crop&crop=center",
+          "description": "Premium house red wine"
+        },
+        {
+          "id": "wine-2",
+          "name": "House White Wine",
+          "price": [100.00, 420.00],
+          "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop&crop=center",
+          "description": "Crisp house white wine"
+        }
+      ]
+    },
+    {
+      "id": "spirits",
+      "name": "Spirits",
+      "icon": "fas fa-glass-whiskey",
+      "gallery": "spirits",
+      "open": false,
+      "items": [
+        {
+          "id": "spirit-1",
+          "name": "Johnnie Walker Red Label",
+          "price": [80.00, 320.00],
+          "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop&crop=center",
+          "description": "Smooth blended Scotch whisky"
+        },
+        {
+          "id": "spirit-2",
+          "name": "Absolut Vodka",
+          "price": [70.00, 280.00],
+          "image": "https://images.unsplash.com/photo-1581013924243-65c8c8293c72?w=400&h=300&fit=crop&crop=center",
+          "description": "Premium Swedish vodka"
+        }
+      ]
+    }
+  ],
+  "cocktails": [
+    {
+      "id": "alcoholic-cocktails",
+      "name": "Alcoholic Cocktails",
+      "icon": "fas fa-cocktail",
+      "gallery": "cocktails",
+      "open": false,
+      "items": [
+        {
+          "id": "cocktail-1",
+          "name": "Sex on the Beach",
+          "price": 170.00,
+          "image": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=400&h=300&fit=crop&crop=center",
+          "description": "Peach liqueur, Absolut Vodka, Cranberry juice, Orange juice, Grenadine syrup"
+        },
+        {
+          "id": "cocktail-2",
+          "name": "Mojito",
+          "price": 150.00,
+          "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop&crop=center",
+          "description": "White rum, Fresh mint, Lime juice, Sugar, Soda water"
+        }
+      ]
+    },
+    {
+      "id": "mocktails",
+      "name": "Mocktails",
+      "icon": "fas fa-glass-martini-alt",
+      "gallery": "mocktails",
+      "open": false,
+      "items": [
+        {
+          "id": "mocktail-1",
+          "name": "Virgin Mojito",
+          "price": 120.00,
+          "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop&crop=center",
+          "description": "Fresh mint, Lime juice, Sugar, Soda water"
+        },
+        {
+          "id": "mocktail-2",
+          "name": "Tropical Sunrise",
+          "price": 130.00,
+          "image": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=400&h=300&fit=crop&crop=center",
+          "description": "Orange juice, Pineapple juice, Grenadine syrup"
+        }
+      ]
+    }
+  ]
+}
