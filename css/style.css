@@ -111,16 +111,16 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(245, 158, 11, 0.1);
 }
 
-/* Mobile-First Hero Section */
+/* Hero Section - Simplified 4-Star Restaurant Design */
 .hero {
-    height: 100vh;
-    min-height: 600px;
-    background: var(--gradient-primary);
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
     display: flex;
     align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding: 1rem 0;
+    background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&h=900&fit=crop&crop=center') center/cover no-repeat;
+    color: var(--text-light);
+    margin-top: 56px;
 }
 
 .hero-overlay {
@@ -129,70 +129,104 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 58, 138, 0.6) 100%);
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-title {
-    font-size: 2rem;
-    color: var(--text-light);
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    animation: fadeInUp 1s ease-out;
-    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    letter-spacing: 1px;
 }
 
 .hero-subtitle {
     font-size: 1rem;
-    color: rgba(248, 250, 252, 0.9);
+    opacity: 0.8;
     margin-bottom: 2rem;
-    animation: fadeInUp 1s ease-out 0.2s both;
-    text-align: center;
+    font-weight: 300;
 }
 
 .hero-buttons {
-    animation: fadeInUp 1s ease-out 0.4s both;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
+    margin-top: 1.5rem;
 }
 
-.btn-primary {
+.hero-buttons .btn {
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn-primary {
     background: var(--gradient-secondary);
     border: none;
-    padding: 0.875rem 2rem;
-    font-weight: 600;
-    font-size: 0.9rem;
-    border-radius: 50px;
-    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn-primary:hover {
+    transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    width: 100%;
-    max-width: 280px;
 }
 
-.btn-primary:hover {
+.hero-buttons .btn-outline-light {
+    border-width: 2px;
+}
+
+.hero-buttons .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
-    background: var(--gradient-secondary);
 }
 
-.btn-outline-light {
-    border: 2px solid rgba(248, 250, 252, 0.5);
-    color: var(--text-light);
-    padding: 0.875rem 2rem;
-    font-weight: 600;
-    font-size: 0.9rem;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    width: 100%;
-    max-width: 280px;
+@media (min-width: 768px) {
+    .hero {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
 }
 
-.btn-outline-light:hover {
-    background: rgba(248, 250, 252, 0.1);
-    border-color: var(--text-light);
-    color: var(--text-light);
-    transform: translateY(-2px);
+@media (min-width: 992px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* Menu Header */
+.menu-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #3730a3 100%);
+    color: white;
+    padding: 3rem 0 2rem;
+    margin-top: 56px;
+}
+
+.menu-header .btn-outline-primary {
+    color: white;
+    border-color: rgba(255, 255, 255, 0.3);
+    background: transparent;
+}
+
+.menu-header .btn-outline-primary:hover,
+.menu-header .btn-outline-primary.active {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+.menu-header .btn-outline-primary.active {
+    background: white;
+    color: var(--primary-color);
+    border-color: white;
 }
 
 /* Mobile-First Categories Section */

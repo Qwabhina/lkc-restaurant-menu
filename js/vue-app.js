@@ -12,7 +12,9 @@ const app = createApp({
                 aLaCarte: [],
                 beverages: [],
                 cocktails: []
-            }
+            },
+            isLoading: false,
+            lightboxInstance: null
         }
     },
     computed: {
@@ -42,6 +44,15 @@ const app = createApp({
                 }
                 return null;
             }).filter(category => category !== null);
+        },
+        currentMenuTitle() {
+            switch(this.currentView) {
+                case 'home': return 'Lancaster Restaurant';
+                case 'aLaCarte': return 'À La Carte';
+                case 'beverages': return 'Beverages';
+                case 'cocktails': return 'Cocktails & Mocktails';
+                default: return 'Menu';
+            }
         }
     },
     methods: {
@@ -67,25 +78,65 @@ const app = createApp({
             return `GH₵ ${price.toFixed(2)}`;
         },
         loadMenuData() {
+            this.isLoading = true;
             fetch('data/menu-data.json')
                 .then(response => response.json())
                 .then(data => {
                     this.menuData = data;
+                    this.isLoading = false;
+                    // Reinitialize lightbox after data loads
+                    this.$nextTick(() => {
+                        this.initializeLightbox();
+                    });
                 })
                 .catch(error => {
                     console.error('Error loading menu data:', error);
+                    this.isLoading = false;
                 });
         },
         setView(view) {
+            if (this.currentView === view) return;
+            
             this.currentView = view;
             this.searchQuery = '';
+            
+            // Ensure menu data is loaded for the selected view
+            if (this.menuData[view].length === 0) {
+                this.loadMenuData();
+            }
+            
             // Scroll to top when changing views
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            
             // Close mobile menu if open
             const navbarToggler = document.querySelector('.navbar-toggler');
             const navbarCollapse = document.querySelector('.navbar-collapse');
             if (navbarToggler && navbarCollapse && navbarCollapse.classList.contains('show')) {
                 navbarToggler.click();
+            }
+            
+            // Reinitialize lightbox for new view
+            this.$nextTick(() => {
+                this.initializeLightbox();
+            });
+        },
+        initializeLightbox() {
+            if (typeof GLightbox !== 'undefined') {
+                // Destroy existing lightbox instance if any
+                if (this.lightboxInstance) {
+                    this.lightboxInstance.destroy();
+                }
+                
+                // Initialize new lightbox instance
+                this.lightboxInstance = GLightbox({
+                    selector: '.glightbox',
+                    touchNavigation: true,
+                    loop: true,
+                    autoplayVideos: false,
+                    openEffect: 'fade',
+                    closeEffect: 'fade',
+                    slideEffect: 'slide'
+                });
             }
         },
         initializeUI() {
@@ -100,14 +151,8 @@ const app = createApp({
                 });
             }
 
-            // Initialize GLightbox
-            if (typeof GLightbox !== 'undefined') {
-                const lightbox = GLightbox({
-                    touchNavigation: true,
-                    loop: true,
-                    autoplayVideos: false
-                });
-            }
+            // Initialize lightbox
+            this.initializeLightbox();
 
             // Navbar scroll effect
             const navbar = document.querySelector('.navbar');
