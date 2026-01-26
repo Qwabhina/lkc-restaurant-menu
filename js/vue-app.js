@@ -1,5 +1,5 @@
 // Lancaster Restaurant - Vue.js Application
-// Main Vue application extracted from index.html for better modularity
+// Main Vue application with integrated logic and hash-based routing
 
 const { createApp } = Vue;
 
@@ -14,7 +14,8 @@ const app = createApp({
                 cocktails: []
             },
             isLoading: false,
-            lightboxInstance: null
+            lightboxInstance: null,
+            observer: null
         }
     },
     computed: {
@@ -84,9 +85,8 @@ const app = createApp({
                 .then(data => {
                     this.menuData = data;
                     this.isLoading = false;
-                    // Reinitialize lightbox after data loads
                     this.$nextTick(() => {
-                        this.initializeLightbox();
+                        this.initializeUI();
                     });
                 })
                 .catch(error => {
@@ -95,39 +95,45 @@ const app = createApp({
                 });
         },
         setView(view) {
-            if (this.currentView === view) return;
+            // Update hash, which will trigger handleHashChange
+            window.location.hash = view === 'home' ? '' : view;
+        },
+        handleHashChange() {
+            const hash = window.location.hash.slice(1); // Remove the '#'
+            const validViews = ['home', 'aLaCarte', 'beverages', 'cocktails'];
             
-            this.currentView = view;
-            this.searchQuery = '';
+            // Default to 'home' if hash is empty or invalid
+            const newView = validViews.includes(hash) ? hash : 'home';
             
-            // Ensure menu data is loaded for the selected view
-            if (this.menuData[view].length === 0) {
-                this.loadMenuData();
+            if (this.currentView !== newView) {
+                this.currentView = newView;
+                this.searchQuery = '';
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Close mobile menu if open
+                this.closeMobileMenu();
+                
+                // Re-run UI initialization after DOM update
+                this.$nextTick(() => {
+                    this.initializeUI();
+                });
             }
-            
-            // Scroll to top when changing views
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            
-            // Close mobile menu if open
+        },
+        closeMobileMenu() {
             const navbarToggler = document.querySelector('.navbar-toggler');
             const navbarCollapse = document.querySelector('.navbar-collapse');
             if (navbarToggler && navbarCollapse && navbarCollapse.classList.contains('show')) {
                 navbarToggler.click();
             }
-            
-            // Reinitialize lightbox for new view
-            this.$nextTick(() => {
-                this.initializeLightbox();
-            });
         },
         initializeLightbox() {
             if (typeof GLightbox !== 'undefined') {
-                // Destroy existing lightbox instance if any
                 if (this.lightboxInstance) {
                     this.lightboxInstance.destroy();
                 }
                 
-                // Initialize new lightbox instance
                 this.lightboxInstance = GLightbox({
                     selector: '.glightbox',
                     touchNavigation: true,
@@ -139,37 +145,108 @@ const app = createApp({
                 });
             }
         },
+        focusSearch() {
+            const searchInput = document.querySelector('input[type="text"]');
+            if (searchInput) {
+                searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                searchInput.focus();
+            }
+        },
+        setupIntersectionObserver() {
+            if ('IntersectionObserver' in window) {
+                // Disconnect previous observer if exists
+                if (this.observer) {
+                    this.observer.disconnect();
+                }
+
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                this.observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-in');
+                            // Optional: Stop observing once animated
+                            // this.observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe elements
+                const animateElements = document.querySelectorAll('.menu-category, .category-card');
+                animateElements.forEach(el => this.observer.observe(el));
+            }
+        },
         initializeUI() {
-            // Initialize AOS
+            // Initialize AOS if available (though we are moving to manual IntersectionObserver for better control)
             if (typeof AOS !== 'undefined') {
-                AOS.init({
-                    duration: 600,
-                    easing: 'ease-in-out',
-                    once: true,
-                    offset: 50,
-                    disable: 'mobile'
-                });
+                AOS.refresh(); 
             }
 
-            // Initialize lightbox
             this.initializeLightbox();
+            this.setupIntersectionObserver();
 
             // Navbar scroll effect
             const navbar = document.querySelector('.navbar');
             if (navbar) {
-                window.addEventListener('scroll', function() {
-                    if (window.scrollY > 30) {
-                        navbar.classList.add('scrolled');
-                    } else {
-                        navbar.classList.remove('scrolled');
-                    }
-                });
+                // Remove existing listener to avoid duplicates if possible, or just add one in mounted
+                // For simplicity in this structure, we'll check if we added a flag or just leave it (browsers handle duplicate named listeners well, but anonymous ones stack)
+                // Better to do this once in mounted.
             }
         }
     },
     mounted() {
         this.loadMenuData();
-        this.initializeUI();
+        
+        // Handle initial hash
+        this.handleHashChange();
+        
+        // Listen for hash changes
+        window.addEventListener('hashchange', this.handleHashChange);
+
+        // Initialize AOS once
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 600,
+                easing: 'ease-in-out',
+                once: true,
+                offset: 50,
+                disable: 'mobile'
+            });
+        }
+
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 30) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const navbar = document.querySelector('.navbar');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            
+            if (navbar && navbarCollapse && navbarToggler && 
+                !navbar.contains(e.target) && 
+                navbarCollapse.classList.contains('show')) {
+                navbarToggler.click();
+            }
+        });
+    },
+    updated() {
+        // Re-initialize UI components when the DOM updates
+        this.$nextTick(() => {
+            this.initializeUI();
+        });
     }
 });
 
