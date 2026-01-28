@@ -10,7 +10,7 @@
     <link rel="manifest" href="images/favicon/site.webmanifest">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sora:wght@300;400;500;600;700&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -61,82 +61,106 @@
         <!-- Home View -->
         <div v-if="currentView === 'home'">
             <!-- Hero Section -->
-            <section class="hero">
-                <div class="hero-overlay"></div>
-                <div class="container">
-                    <div class="row justify-content-center text-center">
-                        <div class="col-lg-8">
-                            <h1 class="hero-title">LANCASTER RESTAURANT</h1>
-                            <p class="hero-subtitle">Fine Dining & Culinary Excellence in Kumasi</p>
-                            <div class="hero-buttons">
-                                <a href="#" class="btn btn-primary btn-lg me-3" @click.prevent="setView('aLaCarte')">
-                                    <i class="fas fa-utensils me-2"></i>À La Carte
-                                </a>
-                                <a href="#" class="btn btn-outline-light btn-lg me-3" @click.prevent="setView('beverages')">
-                                    <i class="fas fa-wine-glass-alt me-2"></i>Beverages
-                                </a>
-                                <a href="#" class="btn btn-outline-light btn-lg" @click.prevent="setView('cocktails')">
-                                    <i class="fas fa-cocktail me-2"></i>Cocktails & Mocktails
-                                </a>
+            <section class="hero min-vh-100 d-flex align-items-center position-relative overflow-hidden">
+                <div class="hero-bg-image position-absolute top-0 start-0 w-100 h-100"></div>
+                <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+                <div class="container position-relative z-2 text-center text-white" data-aos="fade-up">
+                    <span class="d-inline-block py-1 px-3 border border-light rounded-pill mb-4 text-uppercase tracking-wider small">Established 2024</span>
+                    <h1 class="display-1 fw-bold mb-4 font-serif">Culinary <span class="text-primary-gold">Excellence</span></h1>
+                    <p class="lead mb-5 mx-auto" style="max-width: 600px;">Experience the finest dining in Kumasi. A symphony of flavors, crafted with passion and served with elegance.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <button class="btn btn-primary-gold btn-lg rounded-0 px-5" @click.prevent="setView('aLaCarte')">View Menu</button>
+                        <button class="btn btn-outline-light btn-lg rounded-0 px-5" @click.prevent="setView('cocktails')">Our Drinks</button>
+                    </div>
+                </div>
+                <div class="scroll-down position-absolute bottom-0 start-50 translate-middle-x mb-4 text-white animate-bounce">
+                    <i class="fas fa-chevron-down fa-lg"></i>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="py-5 py-lg-6 bg-light">
+                <div class="container py-5">
+                    <div class="row align-items-center gx-5">
+                        <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop" alt="Fine Dining" class="img-fluid shadow-lg rounded-1">
+                                <div class="position-absolute bottom-0 end-0 bg-white p-4 shadow-lg m-n4 rounded-1 d-none d-md-block">
+                                    <h4 class="font-serif text-dark mb-0">Master Chef</h4>
+                                    <small class="text-muted">Signature Dishes</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-left">
+                            <h6 class="text-primary-gold text-uppercase letter-spacing-2 mb-3">The Experience</h6>
+                            <h2 class="display-5 font-serif mb-4">A Symphony of Flavors</h2>
+                            <p class="text-muted mb-4 lead">Located in the heart of Kumasi, Lancaster Restaurant offers a sophisticated dining experience that blends local traditions with international culinary artistry.</p>
+                            <p class="text-muted mb-4">Our chefs select only the freshest ingredients to create dishes that delight the senses. Whether you're joining us for a business lunch or a romantic dinner, every moment is crafted to perfection.</p>
+                            <div class="row g-4 mt-2">
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-wine-glass-alt fa-2x text-primary-gold me-3"></i>
+                                        <div>
+                                            <h5 class="mb-0">Curated Wines</h5>
+                                            <small class="text-muted">Global Selection</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-award fa-2x text-primary-gold me-3"></i>
+                                        <div>
+                                            <h5 class="mb-0">Top Rated</h5>
+                                            <small class="text-muted">5-Star Service</small>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Categories Section -->
-            <section id="categories" class="categories-section py-5">
-                <div class="container">
-                    <div class="row text-center mb-5">
-                        <div class="col-12">
-                            <h2 class="section-title">Our Menu</h2>
-                            <p class="section-subtitle">Experience our carefully curated selection of dishes and drinks</p>
-                        </div>
+            <!-- Menu Categories Section -->
+            <section id="categories" class="py-5 bg-white">
+                <div class="container py-5">
+                    <div class="text-center mb-5" data-aos="fade-up">
+                        <h2 class="display-5 fw-bold mb-3">Our Menu</h2>
+                        <p class="lead text-muted">Experience our carefully curated selection of dishes and drinks</p>
+                        <div class="divider mx-auto bg-primary mb-4" style="width: 60px; height: 3px;"></div>
                     </div>
                     
                     <div class="row g-4">
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="category-card" data-aos="fade-up">
-                                <div class="category-image">
+                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="category-card h-100 text-center p-4 border rounded shadow-sm hover-shadow transition-all" @click="setView('aLaCarte')">
+                                <div class="category-icon mb-4 d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle" style="width: 80px; height: 80px; font-size: 2rem;">
                                     <i class="fas fa-utensils"></i>
                                 </div>
-                                <div class="category-content">
-                                    <h3>À La Carte</h3>
-                                    <p>Snacks, Salads, Hot Soup, Pasta, Local Dishes, Pizzas & More</p>
-                                    <a href="#" class="btn btn-primary" @click="setView('aLaCarte')">
-                                        View Menu <i class="fas fa-arrow-right ms-2"></i>
-                                    </a>
-                                </div>
+                                <h3 class="fw-bold mb-3">À La Carte</h3>
+                                <p class="text-muted mb-4">Appetizers, Mains, Soups, Pasta, Local Dishes, Pizzas & More</p>
+                                <button class="btn btn-outline-primary rounded-pill px-4">View Menu</button>
                             </div>
                         </div>
                         
-                        <div class="col-12 col-md-6">
-                            <div class="category-card" data-aos="fade-up" data-aos-delay="100">
-                                <div class="category-image">
+                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="category-card h-100 text-center p-4 border rounded shadow-sm hover-shadow transition-all" @click="setView('beverages')">
+                                <div class="category-icon mb-4 d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle" style="width: 80px; height: 80px; font-size: 2rem;">
                                     <i class="fas fa-wine-glass"></i>
                                 </div>
-                                <div class="category-content">
-                                    <h3>Beverages</h3>
-                                    <p>House Wines, Spirits, Beers, Soft Drinks & More</p>
-                                    <a href="#" class="btn btn-primary" @click="setView('beverages')">
-                                        View Menu <i class="fas fa-arrow-right ms-2"></i>
-                                    </a>
-                                </div>
+                                <h3 class="fw-bold mb-3">Beverages</h3>
+                                <p class="text-muted mb-4">House Wines, Spirits, Beers, Soft Drinks & More</p>
+                                <button class="btn btn-outline-primary rounded-pill px-4">View Menu</button>
                             </div>
                         </div>
                         
-                        <div class="col-12">
-                            <div class="category-card category-card-wide" data-aos="fade-up" data-aos-delay="200">
-                                <div class="category-image">
+                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="category-card h-100 text-center p-4 border rounded shadow-sm hover-shadow transition-all" @click="setView('cocktails')">
+                                <div class="category-icon mb-4 d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle" style="width: 80px; height: 80px; font-size: 2rem;">
                                     <i class="fas fa-cocktail"></i>
                                 </div>
-                                <div class="category-content">
-                                    <h3>Cocktails & Mocktails</h3>
-                                    <p>Alcoholic Cocktails, Local Cocktails, Mocktails & Specialty Drinks</p>
-                                    <a href="#" class="btn btn-primary" @click="setView('cocktails')">
-                                        View Menu <i class="fas fa-arrow-right ms-2"></i>
-                                    </a>
-                                </div>
+                                <h3 class="fw-bold mb-3">Cocktails</h3>
+                                <p class="text-muted mb-4">Alcoholic Cocktails, Local Cocktails, Mocktails & Specialty Drinks</p>
+                                <button class="btn btn-outline-primary rounded-pill px-4">View Menu</button>
                             </div>
                         </div>
                     </div>
@@ -227,13 +251,12 @@
                                     <div v-for="item in category.items" :key="item.id" class="col-12 col-md-6 col-lg-4">
                                         <div class="menu-item card h-100 border-0 shadow-sm overflow-hidden">
                                             <div class="position-relative overflow-hidden" style="height: 180px;">
-                                                <img :src="item.image" 
-                                                     :alt="item.name" 
-                                                     class="menu-item-image w-100 h-100 object-fit-cover glightbox" 
-                                                     :data-gallery="category.gallery"
-                                                     :data-title="item.name"
-                                                     :data-description="item.description + ' - ' + formatPrice(item.price)">
-                                                <div class="position-absolute top-0 end-0 m-2">
+                                                <a :href="item.image" class="glightbox" :data-gallery="category.gallery" :data-title="item.name" :data-description="item.description + ' - ' + formatPrice(item.price)">
+                                                    <img :src="item.image" 
+                                                         :alt="item.name" 
+                                                         class="menu-item-image w-100 h-100 object-fit-cover">
+                                                </a>
+                                                <div class="position-absolute top-0 end-0 m-2 pointer-events-none">
                                                     <span class="badge bg-primary">{{ formatPrice(item.price) }}</span>
                                                 </div>
                                             </div>

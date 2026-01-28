@@ -23,10 +23,7 @@ const app = createApp({
             const currentMenu = this.menuData[this.currentView] || [];
             
             if (!this.searchQuery.trim()) {
-                return currentMenu.map(category => ({
-                    ...category,
-                    open: category.open || false
-                }));
+                return currentMenu;
             }
             
             const query = this.searchQuery.toLowerCase();
@@ -129,21 +126,24 @@ const app = createApp({
             }
         },
         initializeLightbox() {
-            if (typeof GLightbox !== 'undefined') {
-                if (this.lightboxInstance) {
-                    this.lightboxInstance.destroy();
+            // Wait for DOM updates before initializing lightbox
+            this.$nextTick(() => {
+                if (typeof GLightbox !== 'undefined') {
+                    if (this.lightboxInstance) {
+                        this.lightboxInstance.destroy();
+                    }
+                    
+                    this.lightboxInstance = GLightbox({
+                        selector: '.glightbox',
+                        touchNavigation: true,
+                        loop: true,
+                        autoplayVideos: false,
+                        openEffect: 'zoom',
+                        closeEffect: 'zoom',
+                        slideEffect: 'slide'
+                    });
                 }
-                
-                this.lightboxInstance = GLightbox({
-                    selector: '.glightbox',
-                    touchNavigation: true,
-                    loop: true,
-                    autoplayVideos: false,
-                    openEffect: 'fade',
-                    closeEffect: 'fade',
-                    slideEffect: 'slide'
-                });
-            }
+            });
         },
         focusSearch() {
             const searchInput = document.querySelector('input[type="text"]');
