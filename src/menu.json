@@ -1,0 +1,246 @@
+{
+  "categories": [
+    {
+      "id": "ocean",
+      "name": "From the Ocean",
+      "items": [
+        {
+          "name": "Grilled Grouper",
+          "price": 500.00,
+          "currency": "GH₵",
+          "description": "Served with Lemon butter sauce or Garlic sauce. Side options: Mashed potatoes, potato chips, jollof rice, plain rice, mixed vegetables.",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        }
+      ]
+    },
+    {
+      "id": "farm",
+      "name": "From the Farm",
+      "items": [
+        {
+          "name": "Grilled Beef Fillet",
+          "price": 450.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        },
+        {
+          "name": "Tenderloin Steak",
+          "price": 450.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        },
+        {
+          "name": "Grilled Chicken Breast",
+          "price": 280.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        }
+      ]
+    },
+    {
+      "id": "special",
+      "name": "Special Menu (Imported)",
+      "items": [
+        {
+          "name": "Grilled Salmon",
+          "price": 650.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        },
+        {
+          "name": "Tiger Prawns",
+          "price": 650.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        },
+        {
+          "name": "Grilled Lamb Chops",
+          "price": 650.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        },
+        {
+          "name": "Beef Ribeye Steak (Prime) 300g",
+          "price": 700.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        },
+        {
+          "name": "Sirloin Steak",
+          "price": 680.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        }
+      ]
+    },
+    {
+      "id": "snacks",
+      "name": "Snacks",
+      "items": [
+        {
+          "name": "Kejetia Hot Fried Kelewele",
+          "price": 140.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-food.svg",
+          "expandable": false
+        },
+        {
+          "name": "Homemade Vegetable Spring Rolls",
+          "price": 150.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-food.svg",
+          "expandable": false
+        },
+        {
+          "name": "Buffalo Chicken Wings",
+          "price": 180.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        }
+      ]
+    },
+    {
+      "id": "salads",
+      "name": "Salads",
+      "items": [
+        {
+          "name": "Chef Salad",
+          "price": 250.00,
+          "currency": "GH₵",
+          "description": "Lettuce, Mozzarella Cheese, Chicken, Egg, Tomatoes and Green Pepper Served with Avocado (Seasonal)",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        },
+        {
+          "name": "Greek Salad",
+          "price": 250.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        }
+      ]
+    },
+    {
+      "id": "burgers",
+      "name": "Burgers & Sandwiches",
+      "items": [
+        {
+          "name": "Club Sandwich",
+          "price": 240.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        },
+        {
+          "name": "GH Beef Burger",
+          "price": 280.00,
+          "currency": "GH₵",
+          "description": "3 Pieces of Burger Buns with Beef, (Pork Bacon Option), Cheddar Cheese, Served with Potato Chips",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "items": [
+        {
+          "name": "Tropical Fruits Salad",
+          "price": 180.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        },
+        {
+          "name": "Triple Scoop of Ice Cream",
+          "price": 130.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        },
+        {
+          "name": "Tri-Color Dessert",
+          "price": 180.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-food.svg",
+          "expandable": true
+        }
+      ]
+    },
+    {
+      "id": "beverages",
+      "name": "Beverages",
+      "items": [
+        {
+          "name": "House Red Wine (Glass)",
+          "price": 100.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-drink.svg",
+          "expandable": false
+        },
+        {
+          "name": "House White Wine (Bottle)",
+          "price": 420.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-drink.svg",
+          "expandable": false
+        },
+        {
+          "name": "Cinzano",
+          "price": 50.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-drink.svg",
+          "expandable": false
+        },
+        {
+          "name": "Coca Zero / Fanta / Sprite",
+          "price": 30.00,
+          "currency": "GH₵",
+          "image": "/images/placeholder-drink.svg",
+          "expandable": false
+        }
+      ]
+    },
+    {
+      "id": "cocktails",
+      "name": "Cocktails & Mocktails",
+      "items": [
+        {
+          "name": "Sex on the Beach",
+          "price": 170.00,
+          "currency": "GH₵",
+          "description": "Peach liqueur, Absolut vodka, Cranberry juice, Orange juice, Grenadine syrup",
+          "image": "/images/placeholder-drink.svg",
+          "expandable": true
+        },
+        {
+          "name": "Mojito",
+          "price": 130.00,
+          "currency": "GH₵",
+          "description": "Fresh mint, white rum, sugar, zest of lime and cooling soda water",
+          "image": "/images/placeholder-drink.svg",
+          "expandable": true
+        },
+        {
+          "name": "Chapman (Mocktail)",
+          "price": 120.00,
+          "currency": "GH₵",
+          "description": "Bitters, Fanta, Sprite, Cucumber, Grenadine",
+          "image": "/images/placeholder-drink.svg",
+          "expandable": true
+        }
+      ]
+    }
+  ]
+}

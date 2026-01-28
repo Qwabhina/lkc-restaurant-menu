@@ -1,0 +1,146 @@
+// Brand Colors
+$primary: #173a63;  // Navy
+$secondary: #af1f2d; // Red
+$light: #f8f9fa;    // Off-white
+$dark: #212529;
+
+// Enable Dark Mode (Bootstrap 5.3 defaults)
+$enable-dark-mode: true;
+$color-mode-type: data; // Use data-bs-theme attribute
+
+// Bootstrap Overrides
+$enable-shadows: true;
+$enable-gradients: true; // Enable gradients for a more modern look
+$font-family-sans-serif: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif; // Modern font stack
+$border-radius: 1rem;
+$border-radius-lg: 1.5rem;
+$border-radius-sm: 0.5rem;
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Custom Theming Variables
+:root {
+    --brand-primary: #{$primary};
+    --brand-secondary: #{$secondary};
+    --bg-glass: rgba(255, 255, 255, 0.85);
+    --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    --card-hover-transform: translateY(-5px);
+    --nav-height: 70px;
+}
+
+[data-bs-theme="dark"] {
+    --brand-primary: #8ab4f8; // Lighter navy/blue for dark mode readability
+    --brand-secondary: #f28b82; // Lighter red for dark mode
+    --bg-glass: rgba(33, 37, 41, 0.85);
+    --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    
+    .bg-navy {
+        background-color: #0f172a !important; // Darker navy for background
+    }
+    
+    .text-navy {
+        color: #e2e8f0 !important; // Light text for dark mode
+    }
+}
+
+// Global Styles & Utilities
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// Glassmorphism
+.glass {
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+// Modern Card Styling
+.card {
+    border: none;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background-color: var(--bs-body-bg); // Adapt to theme
+    
+    &:hover {
+        transform: var(--card-hover-transform);
+        box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+// Typography & Colors
+.text-navy {
+    color: $primary !important;
+}
+
+.bg-navy {
+    background-color: $primary !important;
+    color: white;
+}
+
+.text-red {
+    color: $secondary !important;
+}
+
+.bg-red {
+    background-color: $secondary !important;
+    color: white;
+}
+
+// Button Styling
+.btn-outline-navy {
+    color: $primary;
+    border-color: $primary;
+    
+    &:hover {
+        background-color: $primary;
+        color: white;
+    }
+}
+
+[data-bs-theme="dark"] .btn-outline-navy {
+    color: #fff;
+    border-color: #fff;
+    
+    &:hover {
+        background-color: #fff;
+        color: $primary;
+    }
+}
+
+.btn-red {
+    background-color: $secondary;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+    
+    &:hover, &:focus {
+        background-color: darken($secondary, 10%);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba($secondary, 0.4);
+    }
+}
+
+// Navigation Pills
+.nav-pills .nav-link {
+    transition: all 0.3s ease;
+    border-radius: 50rem;
+    padding: 0.5rem 1.5rem;
+}
+
+// Scrollbar Hiding
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+// Animations
+.fade-enter-active, .fade-leave-active { transition: opacity 0.3s ease; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
