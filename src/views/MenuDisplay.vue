@@ -89,8 +89,8 @@
 import { ref, computed, onMounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import menuData from '../menu.json';
-import MenuItemCard from './MenuItemCard.vue';
-import ImagePreview from './ImagePreview.vue';
+import MenuItemCard from '../components/MenuItemCard.vue';
+import ImagePreview from '../components/ImagePreview.vue';
 
 const props = defineProps(['section']);
 const route = useRoute();
@@ -101,13 +101,7 @@ const showPreview = ref(false);
 const previewItem = ref(null);
 const isLoading = ref(true);
 
-// Define section mappings
-const sectionMappings = {
-    'food': ['ocean', 'farm', 'special', 'snacks', 'salads', 'burgers', 'desserts'],
-    'beverages': ['beverages'],
-    'cocktails': ['cocktails']
-};
-
+// Define section titles
 const sectionTitles = {
     'food': 'À La Carte Menu',
     'beverages': 'Beverages',
@@ -118,8 +112,7 @@ const sectionTitles = {
 const sectionTitle = computed(() => sectionTitles[props.section] || 'Menu');
 
 const availableCategories = computed(() => {
-    const allowedIds = sectionMappings[props.section] || [];
-    return menuData.categories.filter(cat => allowedIds.includes(cat.id));
+    return menuData.categories.filter(cat => cat.section === props.section);
 });
 
 const filteredItems = computed(() => {

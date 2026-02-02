@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LandingPage from '../views/LandingPage.vue'
-import MenuDisplay from '../components/MenuDisplay.vue'
+import MenuDisplay from '../views/MenuDisplay.vue'
 
 const routes = [
   {
@@ -17,7 +17,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory('/menu/'), // Set base path here as well
+  history: createWebHistory(import.meta.env.BASE_URL), // Uses the 'base' from vite.config.js automatically
   routes,
   scrollBehavior(to, from, savedPosition) {
     return { top: 0, behavior: 'smooth' }

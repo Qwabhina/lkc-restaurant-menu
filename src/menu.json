@@ -2,6 +2,7 @@
   "categories": [
     {
       "id": "ocean",
+      "section": "food",
       "name": "From the Ocean",
       "items": [
         {
@@ -10,12 +11,16 @@
           "currency": "GH₵",
           "description": "Served with Lemon butter sauce or Garlic sauce. Side options: Mashed potatoes, potato chips, jollof rice, plain rice, mixed vegetables.",
           "image": "/images/placeholder-food.svg",
+          "badges": [
+            "Chef's Choice"
+          ],
           "expandable": true
         }
       ]
     },
     {
       "id": "farm",
+      "section": "food",
       "name": "From the Farm",
       "items": [
         {
@@ -43,6 +48,7 @@
     },
     {
       "id": "special",
+      "section": "food",
       "name": "Special Menu (Imported)",
       "items": [
         {
@@ -84,6 +90,7 @@
     },
     {
       "id": "snacks",
+      "section": "food",
       "name": "Snacks",
       "items": [
         {
@@ -105,12 +112,16 @@
           "price": 180.00,
           "currency": "GH₵",
           "image": "/images/placeholder-food.svg",
+          "badges": [
+            "Spicy"
+          ],
           "expandable": true
         }
       ]
     },
     {
       "id": "salads",
+      "section": "food",
       "name": "Salads",
       "items": [
         {
@@ -132,6 +143,7 @@
     },
     {
       "id": "burgers",
+      "section": "food",
       "name": "Burgers & Sandwiches",
       "items": [
         {
@@ -153,6 +165,7 @@
     },
     {
       "id": "desserts",
+      "section": "food",
       "name": "Desserts",
       "items": [
         {
@@ -180,6 +193,7 @@
     },
     {
       "id": "beverages",
+      "section": "beverages",
       "name": "Beverages",
       "items": [
         {
@@ -214,6 +228,7 @@
     },
     {
       "id": "cocktails",
+      "section": "cocktails",
       "name": "Cocktails & Mocktails",
       "items": [
         {

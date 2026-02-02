@@ -3,6 +3,6 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/menu/', // Replace '/menu/' with your actual subfolder name if different
+  base: '/qr-menu/', // Replace '/menu/' with your actual subfolder name if different
   plugins: [vue()],
 })
